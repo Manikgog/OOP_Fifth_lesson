@@ -30,7 +30,7 @@ void Supermarket::AddProduct(Food* food)
 void Supermarket::Buy(std::string name)
 {
 	size_t count = 0;
-	for (const auto it : _products)
+	for (const auto& it : _products)
 	{
 		if (name == it->GetName())
 		{
