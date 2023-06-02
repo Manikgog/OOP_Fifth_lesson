@@ -3,6 +3,7 @@
 #include <map>
 #include "food.h"
 #include "supermarket.h"
+#include "fabrika.h"
 
 //class Client
 //{
@@ -28,17 +29,29 @@
 
 int main()
 {
+	/*
 	Bread* b0 = new Bread;
 	b0->ShowData();
 	Bread* b = new Bread("bread", 33, 0.5, "Baton");
 	b->ShowData();
 	Milk* m = new Milk("milk", 56, 1.0, 5);
 	m->ShowData();
+	*/
+
 	Supermarket* supermarket = new Supermarket();
+
+	/*
 	supermarket->AddProduct(b);
 	supermarket->AddProduct(m);
 	supermarket->ShowDataOfProducts();
 	supermarket->Buy("milk");
+	supermarket->ShowDataOfProducts();
+	*/
+
+	Food* food;
+	Fabrica* fabrica = new Fabrica();
+	food = fabrica->CreateRandom();
+	supermarket->AddProduct(food);
 	supermarket->ShowDataOfProducts();
 
 	/*Client client1(24, 1);
@@ -90,8 +103,6 @@ int main()
 		it->second->ShowData();
 	}
 	*/
-
-
 
 	return 0;
 }

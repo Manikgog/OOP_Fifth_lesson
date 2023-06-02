@@ -17,6 +17,13 @@ public:
 	void Buy(std::string name);
 
 	void AddProduct(Food* food);
+
+	~Supermarket()
+	{
+		for (const auto& it : _products)
+			delete it;
+	}
+
 };
 
 
